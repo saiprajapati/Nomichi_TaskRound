@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+:root {
+  /* Nomichi brand palette, exactly as specified in the brand brief */
+  --color-rust: #d55d27;
+  --color-yellow: #fffe00;
+  --color-ink: #1c1b1a;
+  --color-olive: #45471d;
+  --color-sand: #d1b788;
+  --color-cream: #fffbf5;
+}
+
+@theme inline {
+  --color-rust: var(--color-rust);
+  --color-yellow: var(--color-yellow);
+  --color-ink: var(--color-ink);
+  --color-olive: var(--color-olive);
+  --color-sand: var(--color-sand);
+  --color-cream: var(--color-cream);
+
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+}
+
+body {
+  font-family: var(--font-body), sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display), sans-serif;
+}
+
+/* Visible keyboard focus everywhere, in brand rust rather than browser blue */
+:focus-visible {
+  outline: 2px solid var(--color-rust);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
