@@ -108,7 +108,7 @@ Three things live here, connected on purpose:
 
 ### AI assist (on the lead detail page)
 
-Built all three suggested features rather than picking one, since they are
+Built all three suggested features, since they are
 cheap to add once the lead context is loaded and they cover different
 moments in a call:
 
