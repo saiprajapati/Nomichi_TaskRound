@@ -1,5 +1,7 @@
 # Nomichi Trip Desk
 
+**Built by: Sai Prajpati**
+
 A working web app for Nomichi's trip enquiry and lead pipeline, built for the
 Engineering Intern build assignment. Next.js (App Router) + Supabase
 (Postgres + Auth) + Vercel.
@@ -12,8 +14,8 @@ Three things live here, connected on purpose:
 
 ## Live links
 
-- App: _add your Vercel URL here before submitting_
-- Repo: _add your GitHub URL here before submitting_
+- App: nomichi-task-round.vercel.app
+- Repo: https://github.com/saiprajapati/Nomichi_TaskRound
 
 ## Stack
 
@@ -121,7 +123,7 @@ moments in a call:
 All three call the Anthropic API from a Server Action (`ai-actions.ts`), so
 the API key never reaches the browser.
 
-## Decisions I'm proud of
+## Engineering decisions and trade-offs
 
 1. **RLS as the source of truth for "what the public can see," not the UI.**
    A closed trip or someone else's lead data is unreachable at the database
@@ -156,6 +158,20 @@ the API key never reaches the browser.
 
 ## Notes on AI tool use
 
-Built with Claude as a build and thinking partner throughout: scaffolding,
-the schema design, the RLS policies, and the three AI-assist features inside
-the product itself. Every line was read and understood, not just accepted.
+AI tools were used as development assistants for brainstorming approaches, debugging issues, understanding unfamiliar concepts, and accelerating implementation.
+
+The overall architecture decisions, feature integration, testing, customization, and final code review were done by me. Every generated piece of code was inspected, modified where required, and understood before being included in the final product.
+
+The AI-assisted features inside the application were intentionally designed and implemented as part of the assignment requirements.
+
+## Developer Notes
+
+This project was built independently as part of the Nomichi Engineering Intern assignment.
+
+Key areas I focused on:
+- Secure backend design using Supabase Row Level Security.
+- Clean separation between public, admin, and CMS functionality.
+- Server-side AI integrations without exposing API keys.
+- Maintaining data integrity through database triggers and validations.
+
+The goal was not only to make the application work, but to design it in a way that remains maintainable and scalable.
